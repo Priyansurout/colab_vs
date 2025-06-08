@@ -12,15 +12,11 @@ vid_path = "object_car.mp4"
 cap = cv2.VideoCapture(vid_path)
 
 # Loop through each frame of the video
-while cap.isOpened:
+while cap.isOpened():
 
     ret , frame = cap.read()
 
-    if not ret:
-        print("End of video stream.")
-        break
 
-    cv2.imshow("Player Tracking'", frame)
 
     if cv2.waitKey(25) & 0xFF == ord('c'):
         break
