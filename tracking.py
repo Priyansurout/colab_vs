@@ -18,9 +18,9 @@ while cap.isOpened():
 
     if ret:
 
-        results = model(frame)
+        results = model.track(frame, persist=True)
 
-        print(results)
+        # print(results)
         annotated_frame = results[0].plot()
         
 
